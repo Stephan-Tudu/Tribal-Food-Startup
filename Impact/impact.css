@@ -1,0 +1,121 @@
+/* This CSS file defines the specific layout and styling for the detailed impact page.
+    It relies on color variables and base classes defined in the main style.css (../style.css).
+*/
+
+.impact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title-large {
+    font-size: 3.5em;
+    font-family: var(--font-quote);
+    color: var(--color-muted-green); /* Use a rich, deep color for the main title */
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 1.1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.impact-card-detailed {
+    background: var(--card);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--color-light-grey);
+}
+
+.impact-title {
+    font-size: 2em;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-light-grey);
+}
+.impact-title.primary {
+    color: var(--color-bright-orange);
+}
+.impact-title.secondary {
+    color: var(--color-dark-brown);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.impact-grid .grid-item {
+    background: var(--color-light-grey);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    border-left: 4px solid var(--color-lime-green); /* Strong highlight */
+}
+
+.impact-grid .grid-item h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+}
+.impact-grid .grid-item p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.impact-grid .full-width {
+    grid-column: 1 / -1;
+    border-left: 4px solid var(--color-bright-orange);
+}
+
+.separator {
+    border: 0; 
+    height: 1px; 
+    background-color: var(--color-light-grey); 
+    margin: 35px 0;
+}
+
+.impact-card-detailed ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.impact-card-detailed ul li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: var(--dark-text);
+}
+.impact-card-detailed ul li::before {
+    content: '✓'; 
+    position: absolute;
+    left: 0;
+    color: var(--color-lime-green); 
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.impact-skills-summary p {
+    font-style: italic;
+    color: #555;
+    padding: 0 15px;
+}
+
+/* Media Query for Mobile adjustments */
+@media (max-width: 768px) {
+    .title-large {
+        font-size: 2.5em;
+    }
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+    .impact-container {
+        padding: 0 15px;
+    }
+}

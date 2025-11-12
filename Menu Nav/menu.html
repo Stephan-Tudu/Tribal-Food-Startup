@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Menu — VAN BHOJ</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <header class="menu-header">
+    <div class="menu-brand">
+      <div class="logo">VB</div>
+      <div>
+        <div class="title">VAN BHOJ</div>
+        <div class="subtitle">Tribal Foods Marketplace</div>
+      </div>
+    </div>
+    <nav>
+      <a href="/STEPHAN/practise 02/index.html" class="nav-link">🏠 Home</a>
+      <a href="menu.html" class="nav-link active">🍴 Menu</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filters-container">
+      <div class="filter">
+        <label for="stateFilter">State:</label>
+        <select id="stateFilter">
+          <option value="all">All States</option>
+        </select>
+      </div>
+      <div class="filter">
+        <label for="typeFilter">Type:</label>
+        <select id="typeFilter">
+          <option value="all">All Types</option>
+          <option value="Veg">Vegetarian</option>
+          <option value="Non-Veg">Non-Vegetarian</option>
+        </select>
+      </div>
+      <div class="filter">
+        <input type="text" id="searchBar" placeholder="Search dish or state...">
+      </div>
+    </section>
+
+    <section class="cards" id="menuCards">
+      <!-- JS will load items here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 VAN BHOJ — Tribal Food Marketplace</p>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* This CSS defines specific styles for the detailed contact page,
+   relying heavily on the color variables and typography defined in ../style.css.
+   NOTE: Ensure your main style.css in the parent directory is correct for colors.
+*/
+
+#detailedContactSection {
+    padding: 60px 20px;
+    background-color: var(--bg-light);
+}
+
+.title-large {
+    font-size: 3em;
+    font-family: var(--font-quote);
+    color: var(--dark-text);
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 1.1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.contact-grid-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Contact form wider than leadership panel */
+    gap: 40px;
+}
+
+.contact-form-panel {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+    height: fit-content;
+}
+
+.leadership-panel {
+    background: var(--color-light-grey);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+}
+
+.panel-title {
+    font-size: 1.8em;
+    color: var(--cta-main);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--cta-main);
+    padding-bottom: 8px;
+}
+
+/* --- Contact Form Styling --- */
+.contact-form-panel form input,
+.contact-form-panel form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-light-grey);
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+.contact-form-panel form input:focus,
+.contact-form-panel form textarea:focus {
+    border-color: var(--color-lime-green);
+    outline: none;
+}
+.send-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* --- Contact Info --- */
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--color-light-grey);
+}
+.contact-info .info-title {
+    color: var(--dark-text);
+    font-size: 1.3em;
+}
+.contact-info p {
+    color: #555;
+    font-weight: 500;
+}
+
+/* --- Leadership Profiles --- */
+.team-profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease;
+}
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h4.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.profile-card p.role {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.profile-card p.role-contact {
+    font-size: 0.85em;
+    color: #777; /* Standard color for email */
+    word-break: break-all;
+    margin-bottom: 5px;
+}
+.profile-card p.social {
+    font-size: 0.85em;
+    color: var(--color-muted-green); /* Highlight Instagram in green */
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Role-specific styling */
+.profile-card.primary {
+    /* Founder/CTO - Stronger visual emphasis */
+    grid-column: span 2; 
+    background: linear-gradient(135deg, var(--color-dark-brown), rgba(60, 71, 89, 0.9));
+    color: #fff;
+    box-shadow: var(--shadow-medium);
+}
+.profile-card.primary h4, .profile-card.primary p {
+    color: #fff;
+}
+.profile-card.primary p.role-contact {
+    color: var(--color-lime-green);
+}
+.profile-card.primary p.social {
+    color: var(--color-lime-green);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .contact-grid-wrapper {
+        grid-template-columns: 1fr; /* Stack panels vertically */
+    }
+    .leadership-panel {
+        order: 1; /* Move leadership team to the top */
+    }
+    .contact-form-panel {
+        order: 2;
+    }
+    .team-profile-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 580px) {
+    .title-large {
+        font-size: 2em;
+    }
+    .team-profile-grid {
+        grid-template-columns: 1fr; /* Stack team profiles */
+    }
+    .profile-card.primary {
+        grid-column: span 1; /* Ensure full-width on mobile */
+    }
+    .contact-form-panel, .leadership-panel {
+        padding: 20px;
+    }
+}

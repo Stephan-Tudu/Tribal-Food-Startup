@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>VAN BHOJ — Tribal Foods Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <div class="logo">VB</div>
+            <div>
+                <div style="font-weight:800">VAN BHOJ</div>
+                <div style="font-size:12px;color:#555">Tribal Foods Marketplace</div>
+            </div>
+        </div>
+
+        <nav id="mainNav">
+             <a href="/STEPHAN/practise 02/index.html" class="nav-link">Home</a>
+            <a href="/STEPHAN/practise 02/Menu Nav/menu.html" class="nav-link">Menu</a>
+            <a href="/STEPHAN/practise 02/About us/about.html" class="nav-link">About Us</a>
+            <a href="/STEPHAN/practise 02/Impact/impact.html" class="nav-link">Impact</a>
+            <a href="/STEPHAN/practise 02/Contact/contact.html" class="nav-link">Contact</a>
+            
+            <div class="profile-dropdown" id="authButtonContainer">
+                <button class="btn cta" id="loginBtn">Login / Sign Up</button>
+            </div>
+            
+            <button class="cart-btn" id="cartBtn">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </button>
+            
+            <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="home-content">
+            <div class="welcome-section-wrapper">
+                <div class="carousel-left-content">
+                    <p class="quote-tagline">Discover Authentic Flavors</p>
+                    <blockquote class="quote-text">
+                        "Every meal is a journey,
+                        a story of the land and its people.
+                        Taste the heritage."
+                    </blockquote>
+                    <p class="quote-author">— The VAN BHOJ Philosophy</p>
+                </div>
+                
+                <div class="image-carousel-container" id="carouselWrapper">
+                    <div class="image-carousel" id="imageCarousel">
+                        <img src="Images01/tamil-nadu.png" alt="Traditional Indian Food 1" class="carousel-img">
+                        <img src="Images01/nagaland.png" alt="Traditional Indian Food 2" class="carousel-img">
+                        <img src="Images/nagaland.png" alt="Traditional Indian Food 3" class="carousel-img">
+                        <img src="Images/tamil-nadu.png" alt="Traditional Indian Food 4" class="carousel-img">
+                        <img src="Images/jharkhand.png" alt="Traditional Indian Food 5" class="carousel-img">
+                    </div>
+                    
+                    <button class="carousel-nav prev" id="carouselPrev">❮</button>
+                    <button class="carousel-nav next" id="carouselNext">❯</button>
+
+                </div>
+            </div>
+
+            <div class="circular-slider-wrapper">
+                <div class="circular-slider-card">
+                    <h2>Welcome to VAN BHOJ</h2>
+                    <p>Your gateway to authentic tribal cuisine from across India. Explore unique flavors, support indigenous communities, and savor dishes prepared with age-old traditions and natural ingredients.</p>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchBar" placeholder="Search for dishes, states or tribes...">
+            </div>
+
+            <div class="filters-container">
+                <div class="filter-dropdown">
+                    <label for="stateFilter">State:</label>
+                    <select id="stateFilter">
+                        <option value="all">All States</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <label for="tribeFilter">Tribe:</label>
+                    <select id="tribeFilter">
+                        <option value="all">All Tribes</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <label for="typeFilter">Type:</label>
+                    <select id="typeFilter">
+                        <option value="all">All Types</option>
+                        <option value="Veg">Vegetarian</option>
+                        <option value="Non-Veg">Non-Vegetarian</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="menuSection">
+            <div class="section-title">
+                <h2>Our Tribal Delicacies</h2>
+            </div>
+            <div class="cards" id="cards">
+            </div>
+            <div class="load-more-container">
+                <button class="btn cta" id="loadMoreBtn" style="display: none;">Load More</button>
+            </div>
+        </section>
+
+        <section id="aboutSection">
+            <div class="section-title">
+                <h2>About VAN BHOJ</h2>
+            </div>
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>VAN BHOJ is more than just a food marketplace; it's a movement to empower indigenous communities and preserve their rich culinary heritage. We connect you directly with tribal artisans, ensuring fair trade and sustainable practices.</p>
+                <p>Every purchase supports livelihoods, cultural preservation, and the sustainable use of natural resources. Discover the authentic flavors that have sustained these communities for generations.</p>
+                
+                <h3>Project Team</h3>
+                <div class="team-list">
+                    <div>Alka Kumari</div>
+                    <div>Angel Gupta</div>
+                    <div>Alok Mishra</div>
+                    <div>Samuel Murmu</div>
+                    <div>Stephan Tudu</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videoSection">
+            <div class="section-title">
+                <h2>Experience the Culture</h2>
+            </div>
+            <div class="video-container">
+                <iframe width="100%" height="450" src="https.bp.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Watch how our ingredients are sourced and prepared by tribal communities.</p>
+            </div>
+        </section>
+
+        <section id="impactSection">
+            <div class="section-title">
+                <h2>Our Impact & Community Support</h2>
+            </div>
+            <div class="about-card impact-card">
+                <h3>Empowering Livelihoods</h3>
+                <p>VAN BHOJ directly contributes to the economic upliftment of tribal families by providing a global platform for their unique produce. We ensure fair wages and sustainable income generation.</p>
+                <div class="stats-grid">
+                    <div><span>50+</span> Communities Supported</div>
+                    <div><span>1000+</span> Artisans Empowered</div>
+                    <div><span>80%</span> Revenue to Producers</div>
+                    <div><span>100%</span> Organic Sourcing</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactSection">
+            <div class="section-title">
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="about-card contact-form-card">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone Number">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn cta">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footerContent">
+            © 2025 VAN BHOJ — Tribal Food Marketplace
+        </div>
+    </footer>
+
+    <div class="overlay" id="previewOverlay">
+        <div class="modal">
+            <button class="close" onclick="closePreview()">✕</button>
+            <img src="" alt="Food Item" id="previewImg">
+            <h3 id="previewName"></h3>
+            <p id="previewState"></p>
+            <p id="previewDesc"></p>
+            <p id="previewPrice"></p>
+            <button class="btn cta" id="previewAddBtn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="loginOverlay">
+        <div class="modal">
+            <button class="close" onclick="closeLogin()">✕</button>
+            <h3 id="loginTitle" style="text-align:center; margin-bottom: 20px;">Login</h3>
+
+            <form id="loginForm" onsubmit="event.preventDefault(); doLogin();">
+                <label for="loginUser">Email or Phone:</label>
+                <input type="text" id="loginUser" placeholder="Enter your email or phone" required>
+                <label for="loginPass" style="margin-top: 15px;">Password:</label>
+                <input type="password" id="loginPass" placeholder="Enter your password" required>
+                <button type="submit" class="btn cta" style="margin-top: 20px; width: 100%;">Login</button>
+                <p style="text-align:center;">Don't have an account? <strong onclick="toggleLoginMode(false)">Sign Up</strong></p>
+            </form>
+
+            <form id="signUpForm" onsubmit="event.preventDefault(); doSignUp();" style="display:none;">
+                <label for="signUpFirstName">First Name:</label>
+                <input type="text" id="signUpFirstName" placeholder="First Name" required>
+                <label for="signUpLastName" style="margin-top: 10px;">Last Name:</label>
+                <input type="text" id="signUpLastName" placeholder="Last Name" required>
+                <label for="signUpPhone" style="margin-top: 10px;">Phone Number:</label>
+                <input type="tel" id="signUpPhone" placeholder="Phone Number" required>
+                <label for="signUpEmail" style="margin-top: 10px;">Email:</label>
+                <input type="email" id="signUpEmail" placeholder="Email Address" required>
+                <label for="signUpGender" style="margin-top: 10px;">Gender:</label>
+                <select id="signUpGender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="signUpPhoto" style="margin-top: 10px;">Profile Photo (Optional):</label>
+                <input type="file" id="signUpPhoto" accept="image/*">
+                <label for="signUpPass" style="margin-top: 10px;">Password:</label>
+                <input type="password" id="signUpPass" placeholder="Create Password (min 6 characters)" required>
+                <label for="confirmPass" style="margin-top: 10px;">Confirm Password:</label>
+                <input type="password" id="confirmPass" placeholder="Confirm Password" required>
+                <button type="submit" class="btn cta" style="margin-top: 20px; width: 100%;">Create Account</button>
+                <p style="text-align:center;">Already have an account? <strong onclick="toggleLoginMode(true)">Login</strong></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="overlay" id="profileOverlay">
+        <div class="modal">
+            <button class="close" onclick="closeProfile()">✕</button>
+            <h3 style="text-align:center; margin-bottom: 20px;">Your Profile</h3>
+            <div id="profileDetailsContent">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="checkoutOverlay">
+        <div class="modal">
+            <button class="close" onclick="closeCheckout()">✕</button>
+            <h3 style="text-align:center; margin-bottom: 20px;">Complete Your Order</h3>
+            <form onsubmit="event.preventDefault(); placeOrder();">
+                <label for="custName">Full Name:</label>
+                <input type="text" id="custName" placeholder="Enter your full name" required>
+                <label for="custPhone" style="margin-top: 15px;">Phone Number:</label>
+                <input type="tel" id="custPhone" placeholder="Enter your phone number" required>
+                <label for="custAddr" style="margin-top: 15px;">Delivery Address:</label>
+                <textarea id="custAddr" placeholder="Enter your delivery address" rows="3" required></textarea>
+                <button type="submit" class="btn cta" style="margin-top: 20px; width: 100%;">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="cart-panel" id="cartPanel">
+        <header>
+            <strong>Your Cart</strong>
+            <button class="close" onclick="closeCart()">×</button>
+        </header>
+        <div class="cart-items" id="cartItems">
+        </div>
+        <div class="cart-summary">
+            <div>Total: <span style="font-weight:800; color:var(--cta-main);">₹<span id="cartTotal">0</span></span></div>
+            <div style="display:flex; justify-content:space-between; margin-top:15px; gap:10px;">
+                <button class="btn" onclick="clearCart()">Clear Cart</button>
+                <button class="btn cta" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
